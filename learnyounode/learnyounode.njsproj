@@ -40,8 +40,10 @@
     <Compile Include="filter.js" />
     <Compile Include="http-client.js" />
     <Compile Include="http-collect.js" />
+    <Compile Include="httpserver.js" />
     <Compile Include="juggling-async.js" />
     <Compile Include="mymodule.js" />
+    <Compile Include="test.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="typings\" />

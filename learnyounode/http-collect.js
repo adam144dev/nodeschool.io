@@ -35,7 +35,7 @@ http.get(address,
     (e) => {
         console.error(`GET error: ${e.message}`);
     }
-    );
+);
 
 
 
