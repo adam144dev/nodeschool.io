@@ -1,3 +1,0 @@
-﻿# nodeschool.io
-
-

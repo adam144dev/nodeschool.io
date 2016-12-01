@@ -3,16 +3,17 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>nodeschool.io</Name>
-    <RootNamespace>nodeschool.io</RootNamespace>
+    <Name>javascripting</Name>
+    <RootNamespace>javascripting</RootNamespace>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>84a2f4a0-7dfd-4caf-8d97-6c3fb948bce2</ProjectGuid>
+    <ProjectGuid>0e3f9a3e-9d63-43d5-a133-64f50783ab97</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app.js</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
@@ -30,9 +31,31 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app.js" />
-    <Content Include="package.json" />
-    <Content Include="README.md" />
+    <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="accessing-array-values.js" />
+    <Compile Include="array-filtering.js" />
+    <Compile Include="for-loop.js" />
+    <Compile Include="function-arguments.js" />
+    <Compile Include="functions.js" />
+    <Compile Include="if-statement.js" />
+    <Compile Include="introduction.js" />
+    <Compile Include="looping-through-arrays.js" />
+    <Compile Include="number-to-string.js" />
+    <Compile Include="numbers.js" />
+    <Compile Include="object-properties.js" />
+    <Compile Include="objects.js" />
+    <Compile Include="revising-strings.js" />
+    <Compile Include="scope.js" />
+    <Compile Include="strings.js" />
+    <Compile Include="variables.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="typings\" />
+    <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\node\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
