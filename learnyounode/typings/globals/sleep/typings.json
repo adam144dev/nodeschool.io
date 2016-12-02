@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/f305105c139273a1d79048dcfce618ab75172cc7/sleep/sleep.d.ts",
+    "raw": "registry:dt/sleep#0.0.0+20160728152313",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/f305105c139273a1d79048dcfce618ab75172cc7/sleep/sleep.d.ts"
+  }
+}
