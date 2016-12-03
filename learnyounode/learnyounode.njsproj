@@ -43,6 +43,7 @@
     <Compile Include="http-client-fun.js" />
     <Compile Include="http-client.js" />
     <Compile Include="http-collect.js" />
+    <Compile Include="http-uppercase-server.js" />
     <Compile Include="http-file-server.js" />
     <Compile Include="httpserver.js" />
     <Compile Include="juggling-async.js" />

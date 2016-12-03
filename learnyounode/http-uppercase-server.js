@@ -7,6 +7,12 @@ var port = process.argv[2];
 var filePath = process.argv[3];
 
 var clientRequest = function(request, response) {
+    if (request.method !== 'POST') {
+        console.log('client requested not POST');
+        response.writeHead(400, { 'Content-Type': 'text/plain' });
+        return response.end('send me a POST\n');
+    }
+
     request.on('error', (err) => {
         console.error(err);
         response.statusCode = 400;
@@ -17,28 +23,15 @@ var clientRequest = function(request, response) {
         console.error(err);
     });
 
-    //request.on('data', (data) => {
-    //    // data not used
-    //});
+    var body = [];
+    request.on('data', (chunk) => {
+        body.push(chunk);
+    });
 
     request.on('end', () => {
-        // text/plain application/octet-stream: Dowolny strumień bajtów. Jest to "domyślny" typ używany często do oznaczenia plików wykonywalnych, plików nieznanego typu, lub plików które powinny być pobrane protokołem nie obsługującym odpowiednika nagłówka
+        body = Buffer.concat(body).toString().toUpperCase();
         response.writeHead(200, { 'Content-Type': 'text/plain' });
-
-        var file = fs.createReadStream(filePath);
-        file.pipe(
-            bl(
-                function (err, data) {
-                    if (err) {
-                        return console.error(err);
-                    }
-
-                    response.end(data);
-                }
-            )
-        );
-        //file.pipe(response);  // does not work (?)
-        //response.end();
+        response.end(body);
 
         console.log('client served');
     });
