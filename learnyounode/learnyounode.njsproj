@@ -46,7 +46,6 @@
     <Compile Include="http-json-api-server.js" />
     <Compile Include="http-uppercase-server.js" />
     <Compile Include="http-file-server.js" />
-    <Compile Include="httpserver.js" />
     <Compile Include="juggling-async.js" />
     <Compile Include="mymodule.js" />
     <Compile Include="test.js" />
