@@ -34,3 +34,4 @@ http.createServer(function (request, response) {
     response.end(json);
 }).listen(8080); // Activates this server, listening on port 8080.
 
+console.log("lisyen");

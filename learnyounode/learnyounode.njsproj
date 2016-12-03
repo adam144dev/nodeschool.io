@@ -47,6 +47,7 @@
     <Compile Include="juggling-async.js" />
     <Compile Include="mymodule.js" />
     <Compile Include="test.js" />
+    <Compile Include="time-server.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="typings\" />

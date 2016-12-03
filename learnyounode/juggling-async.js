@@ -32,17 +32,17 @@ function printResults() {
 
 //            // consume response body
 //            var chunks = [];
-//            response.on("results",
-//            (chunk) => {
-//                //console.log(chunk);
-//                chunks.push(chunk);
-//            });
+//            response.on("data",
+//              (chunk) => {
+//                 //console.log(chunk);
+//                    chunks.push(chunk);
+//               });
 
 //            response.on("end",
-//            () => {
-//                received++;
-//                results[i] = Buffer.concat(chunks);
-//            });
+//               () => {
+//                  received++;
+//                 results[i] = Buffer.concat(chunks);
+//               });
 //        })
 //        .on("error", GetOnError);
 //}
