@@ -22,7 +22,6 @@ var clientRequest = function(request, response) {
     //});
 
     request.on('end', () => {
-        // text/plain application/octet-stream: Dowolny strumień bajtów. Jest to "domyślny" typ używany często do oznaczenia plików wykonywalnych, plików nieznanego typu, lub plików które powinny być pobrane protokołem nie obsługującym odpowiednika nagłówka
         response.writeHead(200, { 'Content-Type': 'text/plain' });
 
         var file = fs.createReadStream(filePath);
