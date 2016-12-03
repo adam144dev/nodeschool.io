@@ -15,23 +15,21 @@ http.createServer(function (request, response) {
         body = Buffer.concat(body).toString();
         // At this point, we have the headers, method, url and body, and can now
         // do whatever we need to in order to respond to this request.
-        });
+        response.writeHead(200, { 'Content-Type': 'application/json' });
+        var responseBody = {
+            headers: headers,
+            method: method,
+            url: url,
+            body: body
+        };
+
+        var json = JSON.stringify(responseBody);
+        //console.log(json);
+        response.end(json);
+    });
 
     response.on('error', function (err) {
         console.error(err);
     });
-
-    response.writeHead(200, { 'Content-Type': 'application/json' });
-    var responseBody = {
-        headers: headers,
-        method: method,
-        url: url,
-        body: body
-    };
-
-    var json = JSON.stringify(responseBody);
-    //console.log(json);
-    response.end(json);
 }).listen(8080); // Activates this server, listening on port 8080.
 
-console.log("lisyen");
